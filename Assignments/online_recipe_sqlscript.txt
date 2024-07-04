@@ -1,0 +1,40 @@
+create table category
+(
+categoryid int PRIMARY KEY,
+categoryname varchar(20)
+)
+insert into category values(1,'Andhra');
+insert into category values(2,'Awadhi');
+insert into category values(3,'Bengali');
+insert into category values(4,'Bihari');
+insert into category values(5,'Gujrati');
+insert into category values(6,'Hyderabadi');
+insert into category values(7,'Maharashtrian');
+insert into category values(8,'Punjabi');
+insert into category values(9,'Rajasthani');
+insert into category values(10,'South Indian');
+
+
+create table recipe
+(
+categoryid int references category(categoryid),
+recipename varchar(50),
+picture varchar(20),
+description varchar(100)
+)
+
+insert into recipe values(1,'Baby Uttapam','11.jpg','Small uttapams topped with onion,tomato');
+insert into recipe values(1,'Cucumber Chutney','12.jpg','A crunchy chutney of cucumber ground with dals.');
+insert into recipe values(1,'Mla Dosa','13.jpg','An unusual of-moong dosa stuffed withcupma.');
+insert into recipe values(1,'Spicy Bhindi Andhrastyle','14.jpg','Small whole ladysfingers cooked masala');
+insert into recipe values(1,'Turai Chutney','15.jpg','An surprisingly tasty chutney of turai.');
+insert into recipe values(1,'Andhra Amla Pickle','noimage.jpg','Indian gooseberry pickle in Andhra style');
+insert into recipe values(1,'Andhra Drumstick Curry','noimage.jpg','Sour drumsticks, cooked in...');
+insert into recipe values(1,'Andhra Mashed Brinjal','noimage.jpg','Small brinjals cooked in ...');
+insert into recipe values(4,'Baingan Ka Chokha','21.jpg','Mashed brinjal sautéed in Bihari style');
+insert into recipe values(4,'Chokha','22.jpg','Bihari delight made from either potatoes or...');
+insert into recipe values(4,'Litti','23.jpg','Small maida balls stuffed with sattu filling...');
+insert into recipe values(4,'Parwal Ki Mithai','24.jpg','A unique mithai of parwal with ....');
+insert into recipe values(4,'Black Gram Sattu Roti','noimage.jpg','A healthy parantha ideal for breakfast');
+insert into recipe values(4,'Bhaang Ke Pakore','noimage.jpg','A typical North Indian speciality that...');
+insert into recipe values(4,'Malpua With Rabdi','noimage.jpg','Indian pancakes in rabdi');
