@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj": {}
+    "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj": {}
   },
   "projects": {
-    "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj": {
+    "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj",
+        "projectUniqueName": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj",
         "projectName": "MVCEFCoreCodeFirst",
-        "projectPath": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj",
+        "projectPath": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\MVCEFCoreCodeFirst.csproj",
         "packagesPath": "C:\\Users\\raman\\.nuget\\packages\\",
-        "outputPath": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\obj\\",
+        "outputPath": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreCodeFirst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\raman\\AppData\\Roaming\\NuGet\\NuGet.Config",

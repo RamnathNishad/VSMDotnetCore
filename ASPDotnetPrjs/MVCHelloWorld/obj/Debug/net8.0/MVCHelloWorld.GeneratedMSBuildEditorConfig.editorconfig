@@ -17,75 +17,75 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVCHelloWorld
 build_property.RootNamespace = MVCHelloWorld
-build_property.ProjectDir = C:\VSMDotnet\ASPDotnetPrjs\MVCHelloWorld\
+build_property.ProjectDir = C:\vsmgit\ASPDotnetPrjs\MVCHelloWorld\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\VSMDotnet\ASPDotnetPrjs\MVCHelloWorld
+build_property.MSBuildProjectDirectory = C:\vsmgit\ASPDotnetPrjs\MVCHelloWorld
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Customer/CustomerPageST.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Customer/CustomerPageST.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJQYWdlU1QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Customer/CustomerPageWK.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Customer/CustomerPageWK.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJQYWdlV0suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Create.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/DisplayEmps.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/DisplayEmps.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGlzcGxheUVtcHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Home.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Index.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/MessagePage.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Employee/MessagePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTWVzc2FnZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/Error.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/Index.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/LoginPage.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/LoginPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVNYW5hZ2VtZW50XExvZ2luUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/SecondPage.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/SecondPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVNYW5hZ2VtZW50XFNlY29uZFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/Welcome.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/StateManagement/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVNYW5hZ2VtZW50XFdlbGNvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/_ViewImports.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/_ViewStart.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/VSMDotnet/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/_Layout.cshtml]
+[C:/vsmgit/ASPDotnetPrjs/MVCHelloWorld/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vvgjhq24jm

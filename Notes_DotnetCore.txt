@@ -1,0 +1,480 @@
+Views types:
+1) weakly-typed:- no model is binded with the view
+2) Strongly-typed :- model is binded using @model <type-of-model>. Make sure u must pass the instance of the model in this view:
+			return View(modelInstance);
+
+
+Razor syntaxes:- It is a view engine we can use to write c# code inside the html view pages. It is processed at server and returned data is embedded within the View html as a response.
+starts with @ symbol.
+
+@if
+@foreach
+@{
+	--statements block
+}
+@*
+	for comment
+*@
+
+Views is designed only with html elements.
+We can use Html Helper classes and also tag-helper as a latest shorter than html helper syntaxes.
+
+Html helpers:- These are used to generate html elements using extension methods of Html class.
+Two forms based on type of views:
+1) weakly-typed view:
+	@Html.DisplayName("Ecode")
+	@Html.TextBox("Ecode")
+
+2) strongly-typed view:
+	@Html.DisplayNameFor(model=>model.Ecode)
+	@Html.TextBoxFor(model=>model.Ecode)
+
+
+
+
+
+============Statemanagement in ASP.NET MVC===================
+1)using server-side techniques
+ViewData:- It's scope is limited only from action to its view. Not accessible across actions. We need to type-cast before as it stores data as an object. It stores with key/value as a dictionary object.
+
+ViewBag:- It is same as ViewData in terms scope and visibility but it is of dynamic type. So no need of type-casting while accessing.  We don't get intelligence about the object in Visual Studio.
+
+TempData:- It is also stored/accessed using key/value. It is visible across actions and even across controllers too.
+It remains in memory till it is not accessed and gets removed as soon as it is accessed.
+
+Action1(x=100)---->Action2View(x is visible)---->Action3View(x not there)
+
+Action1(x=100)---->Action2View---->Action3View(x is visible)--->Action4
+
+In case if we want to retain the data while accessing, we can use Keep() method.
+Keep()----> retains all the tempdata
+Keep("key")----> retains only specified value of the key.
+
+Session:- This is for every user session it is maintained, data can be stored and accessed anywhere for the user session. Uses key/value and needs typecasting while accessing.
+
+Note:- Session is available only if it configured in the services list in Program.cs file
+
+	builder.Services.AddSession(); //before app is build
+	var app=builder.Build();
+
+	app.UseSession(); //before running the app
+	app.Run();
+
+	Session object can be used in the controllers or views etc
+
+2) client-side technique:-
+a) cookies:- to transfer data from one request to another request
+	HttpContext.Response.Cookies.Add("x","value"); --->to write
+	
+	var ck=HttpContext.Response.Cookies["x"].Value; --to read
+
+
+
+====================Model Validations=================
+client-side validations:- It is done using DataAnnotation attributes.
+
+[Required]
+public int Ecode{get;set;}
+
+[Email]
+[Compare]
+[Password]
+[Regex()]
+
+ModelState.IsValid is a Boolean property which gets set to true/false based on validations provided by the DataAnnotation attributes
+if(ModelState.IsValid)
+{
+	//perform the task
+}
+else
+{
+	return View(); //or u can other message view
+}
+
+
+
+=====================LINQ=========================
+Language Integrated Query:- It is common programming model for querying different types of data sources like SQL,XML,objects etc.
+
+Two flavours of linq syntaxes=>
+1) operators based :-  select, from , order by, where, group by and so on
+
+2) extension methods combined with lambda expressions:-
+
+
+LINQ + EF => query + manipulations (CRUD)
+
+
+
+EF:- EntityFramework (ORM) tools for Object-Relation Mapping.
+
+It is used in DataAccess layer component for all the CRUD operations.
+
+
+MVC---V+Model--------->DataAccessLayer---->EF core(Models)---->Database
+ 
+Two approaches of Ef Core:
+1) Database-First approach:- when database is already there. we just map models with database objects.
+
+Steps for EF core:
+a) install the packages:
+	-Microsoft.EntityFrameworkCore
+	-Microsoft.EntityFrameworkCore.SqlServer
+
+b) create the DbContext and DbSet for the database tables
+	
+	class Employee
+	{
+		public int Id {get;set;}
+		public string Ename {get;set;}
+		public int Salary {get;set;}
+		public int Deptid {get;set;}
+	}
+
+	class EmpDataAccess : DbContext 
+	{
+		DbContextOptions<EmpDataAccess> dbCtx;
+		public EmpDataAccess(DbContextOptions<EmpDataAccess> dbCtx) 
+			: base(dbCtx)
+		{
+			this.dbCtx=dbCtx;
+		}
+	
+		public DbSet<Employee> Employees{get;set;}		
+	} 
+c) Register the context class in the Program.cs as a middleware service
+	builder.Services.AddDbContext<EmpDataAccess>(options=>
+		{
+			options.UseSqlServer("connection string");
+		})
+
+
+2) Code-First approach:-
+steps:-
+
+a) install the required packages from Nuget:
+		-Microsoft.EntityframeworkCore
+		-Microsoft.EntityframeworkCore.SqlServer
+		-Microsoft.EntityframeworkCore.Tools ----(for migration commands)
+		 
+b) define the models and context. 
+c) register the dbcontext in Program.cs file for connection string
+d) run the migration commands to generate database objects as per models and context inside the package console window:
+	--Add-Migration name-of-the-migration
+		This generates the script for the db objects
+	--Update-Database   :- this runs the above script and creates db objects in backend db
+
+Note: before running migration commands, set the project as startup and build with no errors.
+
+
+Update-Database :- if no migration name is specified , it will run the lates migration by default. To run a specific migration, we can use switch -Migration :
+	
+	e.g. Update-Database -Migration add_col_country
+
+defining relations between tables:
+i) one-to-one
+
+class Manager
+{
+	[Key]
+	public int MgrId{get;set;}
+	public string Ename {get;set;}	
+}
+
+class Project
+{
+	public int Id{get;set;}
+	public string ProjectName {get;set;}
+
+	[ForeignKey]
+	public int MgrId{get;set;}
+
+	//navigation
+	public Manager manager {get;set;}
+}
+
+--one-to-many
+
+class Department
+{
+
+	public int Id{get;set;}
+	public string Dname {get;set;}
+
+	//navigation
+	public ICollection<Employee> Employees{get;set;}
+}
+
+class Employee
+{
+	public int Id{get;set;}
+	public string Ename {get;set;}
+
+	//navigation
+	public Department Department{get;set;}
+	
+}
+
+Repository pattern is used to abstract controller from data access layer for incase if the DAL goes for changes, it won't affect the controller directly.
+
+Controller----->Repository Layer--->DataAccess(EF Core)------>Database
+
+1)Controller----->Repository Layer--->DataAccess(EF Core)------>SQL Database
+
+
+2)Controller----->Repository Layer--->DataAccess(EF Core)------>Oracle Database
+
+
+we use interfaces across repository and data access layer
+
+interface IEmployeeRepository
+{
+	List<Employee> GetEmps();
+	Employee GetEmpById(int id);
+
+	void AddEmployee(Employee emp);
+	void DeleteEmployee(int id);
+	void UpdateEmp(Employee emp);
+	
+}
+
+class EmployeeRepository : IEmployeeRepository
+{
+	EmpDbContext dbCtx;
+	public EmployeeRepository(EmpDbContext dbCtx)
+	{
+		this.dbCtx=dbCtx;
+	}
+	public List<Employee> GetEmps()
+	{
+		return dbCtx.tbl_employee.ToList();
+	}
+	public Employee GetEmpById(int id)
+	{
+		return dbCtx.tbl_employee.Find(id);
+	}
+	void AddEmployee(Employee emp)
+	{
+		dbCtx.tbl_employee.Add(emp);
+		dbCtx.SaveChanges();
+	}
+	void DeleteEmployee(int id)
+	{
+		var record=dbCtx.tbl_employee.Find(id);
+		if(record!=null)
+		{
+			dbCtx.tbl_employee.Remove(record);
+			dbCtx.SaveChanges();
+		}
+	}
+	void UpdateEmp(Employee emp)
+	{
+		var record=dbCtx.tbl_employee.Find(emp.Ecode);
+		if(record!=null)
+		{
+			record.Ename=emp.Ename;
+			record.Salary=emp.Salary;
+			record.Deptid=emp.Deptid;
+			dbCtx.SaveChanges();
+		}
+
+	}
+
+}
+
+-This repository class shud be injected into controller:
+	in Program.cs configure dependency injection for this:
+		builder.Services.AddSingle<IEmployeeRepository,EmployeeRepository>();
+
+-in controller constructor:
+
+	class EmployeeController : Controller
+	{
+		IEmployeeRepository repository;
+		public EmployeeController(IEmployeeRepository repository)
+		{
+			this.repository=repository;
+		}
+	}
+
+
+Dependency injection can be done using 3 methods:-
+
+1) AddSingleton<>():- Only one instance throughout the application will be created and injected wherever it is needed. So instance creation shud be done globally inside Progam.cs file.
+
+2) AddTransient<>():- It creates for every injection a new instance.
+
+3) AddScoped<>():- It creates for every request a new instance
+
+
+
+
+
+
+ 
+
+
+
+interface IAbc
+{
+}
+
+
+class Abc : IAbc
+{
+
+}
+
+Program.cs
+	builder.Services.AddScoped<IAbc,Abc>();
+
+
+controller:
+	public DemoController : Controller 
+	{
+		readonly IAbc abc;
+		public DemoController (IAbc _abc)
+		{
+			abc=_abc;
+		}
+	}
+
+Dependency Injection Principle:- As per this principle, higher level modules should not directly depend on lower level modules. They shud depend on abstraction rather than concrete classes.
+
+
+Abstraction is done using interface and concrete classes are injected using dependency injection service which is in-built ASP.NET Core.
+
+SOLID:---D---> Dependency Injection Principle
+
+
+======================Partial Views==========================
+When there is a complex view, it can be simplified using partial views.
+Partial views are meant for sharing UI across multiple views. Like parent-child views.
+
+Partial views names starts with underscore(_)
+
+we render the partial view using
+	@Html.Partial("_viewname")
+	
+	<partial name="_viewname" />
+
+
+
+-_Layout view:- It define the structure of views to be used. it is kept in Shared folder.
+
+Layout calls sections with some name which is defined in views.
+
+
+EmpView.cshtml
+
+	<h1>Welcome</h1>
+	<hr/>
+
+	@section s1{
+
+		<p>This is footer</p>
+	}
+
+
+_Layout.cshtml
+
+<html>
+<head>
+
+<head>
+<body>
+	@RenderBody()
+
+	@RenderSection("s1",false)
+</body>
+</html>
+
+-To link layout with view:
+a) global linking: _ViewStart.cshtml under views folder. This special view is called automatically before every view. Hence starting statements like linking of layout can be done here.
+	@{
+    		Layout = "_Layout"; //must be present in Shared folder
+	}
+
+b) view level linking: can be overridden in a specific view also
+
+
+ 
+
+
+
+
+
+
+Fluent API:- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

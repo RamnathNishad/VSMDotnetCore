@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ChfzqcAXx0I=",
+  "dgSpecHash": "2Gn3GyXORMY=",
   "success": true,
-  "projectFilePath": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
+  "projectFilePath": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raman\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\raman\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

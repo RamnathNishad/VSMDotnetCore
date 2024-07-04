@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCEFCoreDBFirst")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+789d56a3c4f041612716c9085572b4093f5bdb49")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCEFCoreDBFirst")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCEFCoreDBFirst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

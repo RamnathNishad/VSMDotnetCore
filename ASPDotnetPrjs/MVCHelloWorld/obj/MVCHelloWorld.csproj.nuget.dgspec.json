@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj": {}
+    "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj": {
+    "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
+        "projectUniqueName": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
         "projectName": "MVCHelloWorld",
-        "projectPath": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
+        "projectPath": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\MVCHelloWorld.csproj",
         "packagesPath": "C:\\Users\\raman\\.nuget\\packages\\",
-        "outputPath": "C:\\VSMDotnet\\ASPDotnetPrjs\\MVCHelloWorld\\obj\\",
+        "outputPath": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\raman\\AppData\\Roaming\\NuGet\\NuGet.Config",
