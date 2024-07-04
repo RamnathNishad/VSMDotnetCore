@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var lstCities = (IEnumerable<SelectListItem>)ViewData["cities"];
+    var lstHobbies = new List<string> { "Biking", "Singing", "Painting" };
+    var custData = (Customer)ViewData["data"];
+
+    var obj = ViewBag.record;
+}
+
+
+<p>Status:@ViewBag.Status</p>
+<p>@obj.Ecode</p>
+<p>@obj.Ename</p>
+<p>@obj.Salary</p>
+<p>@obj.Deptid</p>
+
+
+
+
+@using(Html.BeginForm("AddCustomer","Customer"))
+{
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td>@Html.TextBox("CustId")</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>@Html.TextBox("Name")</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>@Html.Password("Password")</td>
+        </tr>
+        <tr>
+            <td>Select gender:</td>
+            <td>
+                @Html.RadioButton("Gender","M") Male
+                @Html.RadioButton("Gender", "F") Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select city:</td>
+            <td>
+                @Html.DropDownList("SelectedCity",lstCities)
+ 
+               @*  <select name="SelectedCity">
+                @foreach(var city in lstCities)
+                {
+                    <option value="@city">@city</option>
+                }
+                </select> *@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select hobbies:
+            </td>
+            <td>
+                @Html.CheckBox("Hobbies")
+                @foreach (var hobby in lstHobbies)
+                {
+                    <input type="checkbox" name="Hobbies" id="Hobbies" value="@hobby" />@hobby
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table class="table">
+    @if(custData!=null)
+    {
+            <tr>
+                <th> CustId</th>
+                <th> Name</th>
+                <th> Gender</th>
+                <th> SelectedCity</th>
+                <th>
+                   Hobbies
+                </th>
+            </tr>
+            <tr>
+                <td> @custData.CustId</td>
+                <td> @custData.Name</td>                
+                <td> @custData.Gender</td>                
+                <td> @custData.SelectedCity</td>
+                <td>
+                @foreach(var hobby in custData.Hobbies)
+                {
+                    @hobby<span>,</span>
+                }
+                </td>
+            </tr>        
+    }
+    </table>
+}
