@@ -29,7 +29,9 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        @Html.Partial("_EmpItemView",item)
+        @* @Html.Partial("_EmpItemView",item) *@
+        @* OR *@
+        <partial name="_EmpItemView" model="@item" />
 }
     </tbody>
 </table>

@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
 namespace MVCEFCoreDBFirst.Models
 {
     public class EmployeeRepository : IEmployeeRepository
@@ -11,8 +14,15 @@ namespace MVCEFCoreDBFirst.Models
 
         public void AddEmployee(Employee emp)
         {
-            dbCtx.tbl_employee.Add(emp);
-            dbCtx.SaveChanges();
+            //dbCtx.tbl_employee.Add(emp);
+            //dbCtx.SaveChanges();
+
+            var pec = new SqlParameter("@ec", emp.Ecode);
+            var pen = new SqlParameter("@en", emp.Ename);
+            var psal = new SqlParameter("@sal", emp.Salary);
+            var pdid = new SqlParameter("@did", emp.Deptid);
+
+            dbCtx.Database.ExecuteSqlRaw("exec sp_insert_emp @ec,@en,@sal,@did", pec, pen, psal, pdid);
         }
 
         public void DeleteEmployee(int id)
@@ -27,12 +37,18 @@ namespace MVCEFCoreDBFirst.Models
 
         public Employee GetEmpById(int id)
         {
-            return dbCtx.tbl_employee.Find(id);
+            //return dbCtx.tbl_employee.Find(id);
+            var ecParam = new SqlParameter("@ec", id);
+
+            return dbCtx.tbl_employee
+                        .FromSqlRaw("exec sp_getemp_byid @ec", ecParam)
+                        .ToList()
+                        .SingleOrDefault();
         }
 
         public List<Employee> GetEmps()
         {
-            return dbCtx.tbl_employee.ToList();
+            return dbCtx.tbl_employee.FromSqlRaw("exec sp_getemps").ToList();       
         }
 
         public void UpdateEmp(Employee emp)

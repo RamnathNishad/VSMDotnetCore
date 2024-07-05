@@ -3,8 +3,113 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+     <script src="lib/jquery/dist/jquery.js"></script>
+
+
+    <script>
+        function getAllEmps() {
+
+            var url = "http://localhost:5024/api/Employee/GetAllEmps";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {                   
+                    var str = "<table border=1>";
+                    for (var i = 0; i < data.length; i++) {
+                        str += "<tr><td>" + data[i].ecode + "</td>";
+                        str += "<td>" + data[i].ename + "</td>";
+                        str += "<td>" + data[i].salary + "</td>";
+                        str += "<td>" + data[i].deptid + "</td></tr>";
+                    }
+                    str += "</table>";
+                    document.getElementById('d1').innerHTML = str;
+                });
+        }
+
+        function getEmps() {
+            $.ajax({
+                url: "http://localhost:5024/api/Employee/GetAllEmps",
+                method: "GET",
+                success: function (data) {
+                    //console.log(data);
+                    var str = "<table border=1>";
+                    for (var i = 0; i < data.length; i++) {
+                        str += "<tr><td>" + data[i].ecode + "</td>";
+                        str += "<td>" + data[i].ename + "</td>";
+                        str += "<td>" + data[i].salary + "</td>";
+                        str += "<td>" + data[i].deptid + "</td></tr>";
+                    }
+                    str += "</table>";
+                    $("#d1").html(str);
+                },
+                error: function (err) {
+                    alert("some error");
+                }
+            });
+        }
+
+        function addEmp() {
+            var ec = $("#txtec").val();
+            var en = $("#txten").val();
+            var sal = $("#txtsal").val();
+            var did = $("#txtdid").val();
+
+            var empObj = {
+                "ecode": 109,
+                "ename": "Tom",
+                "salary": 54321,
+                "deptid": 203
+            };
+            console.log(empObj);
+            //send ajax post request
+            $.ajax({
+                url: "http://localhost:5024/api/Employee/AddEmp",
+                method: "POST",
+                data: {
+                    "ecode": 109,
+                    "ename": "Tom",
+                    "salary": 54321,
+                    "deptid": 203
+                },
+                dataType: "json", 
+                success: function (response) {
+                    alert("Record inserted");
+                },
+                error: function () {
+                    alert("some error");
+                }
+            });
+
+        }
+    </script>
 </head>
 <body>
     <h1>This is Home page</h1>
+    <input type="button" value="GetAllEmps" onclick="getAllEmps()" />
+    <input type="button" value="Jquery GetAllEmps" onclick="getEmps()" />
+    <form>
+        <table border="1">
+            <tr>
+                <td>Ecode:</td>
+                <td><input type="text" id="txtec" /></td>
+            </tr>
+            <tr>
+                <td>Ename:</td>
+                <td><input type="text" id="txten" /></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input type="text" id="txtsal" /></td>
+            </tr>
+            <tr>
+                <td>Deptid:</td>
+                <td><input type="text" id="txtdid" /></td>
+            </tr>
+        </table>
+        <input type="button" value="Add Emp" onclick="addEmp()"/>
+    </form>
+
+    <div id="d1"></div>
+
 </body>
 </html>

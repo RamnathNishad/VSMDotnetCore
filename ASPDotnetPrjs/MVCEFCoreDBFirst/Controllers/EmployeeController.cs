@@ -15,7 +15,8 @@ namespace MVCEFCoreDBFirst.Controllers
 
         public IActionResult Index()
         {
-            var lstEmps = repo.GetEmps();
+            //var lstEmps = repo.GetEmps();
+            var lstEmps=ApiConsumer.GetEmps();
             return View(lstEmps);
         }
 
@@ -29,15 +30,25 @@ namespace MVCEFCoreDBFirst.Controllers
         public IActionResult Create(Employee emp)
         {
             //using Repository insert the record in Database
-            repo.AddEmployee(emp);  
-            return RedirectToAction("Index");
+            //repo.AddEmployee(emp);  
+            
+            var status=ApiConsumer.AddEmployee(emp);
+            if (status)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpGet]
         public IActionResult Delete(int id)
         {
             //delete the record by id using Repository            
-            repo.DeleteEmployee(id);
+            //repo.DeleteEmployee(id);
+            ApiConsumer.DeleteEmployee(id);
             return RedirectToAction("Index");
         }
 
@@ -45,7 +56,9 @@ namespace MVCEFCoreDBFirst.Controllers
         public IActionResult Edit(int id)
         {
             //find the record by id using repository
-            var record=repo.GetEmpById(id);
+            //var record=repo.GetEmpById(id);
+
+            var record=ApiConsumer.GetEmpById(id);
             //display the view with record for edit
             return View(record);
         }
@@ -54,7 +67,9 @@ namespace MVCEFCoreDBFirst.Controllers
         public IActionResult Edit(Employee emp)
         {
             //update the record by id using repository
-            repo.UpdateEmp(emp);
+            //repo.UpdateEmp(emp);
+
+            ApiConsumer.UpdateEmployee(emp);
             return RedirectToAction("Index");
         }
 
@@ -62,7 +77,9 @@ namespace MVCEFCoreDBFirst.Controllers
         public IActionResult Details(int id)
         {
             //find the record by id using repository
-            var record = repo.GetEmpById(id);
+            //var record = repo.GetEmpById(id);
+
+            var record = ApiConsumer.GetEmpById(id);
             //display the record in a detail view
 
             return View(record);

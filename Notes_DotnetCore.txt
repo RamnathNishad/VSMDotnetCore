@@ -396,9 +396,60 @@ a) global linking: _ViewStart.cshtml under views folder. This special view is ca
 	}
 
 b) view level linking: can be overridden in a specific view also
+---calling stored procedures using EF Core:-
 
 
- 
+
+
+================ASP.NEt WEB API======================
+WEB API is the API over the web used as service oriented component on internet.
+It works on HTTP protocol i.e. service over http.
+
+It exposes functionalities or services across multiple types of clients over the web like Browser,Desktop,Mobile,IoTs etc.
+
+MediaTypeFormatter:- This component does the conversion of data into particular format like xml,json,binary and so om. We need just enable this inside the service.
+
+Http Request Headers:-
+1) HttpGet:- we want to access the rescource from api
+2) HttpPost:- to create the resource on the server api
+3) HttpPut:- to update the resource on the server api
+4) HttpDelete:- to delete resource
+
+ASP.NET Web API:-
+1) MVC :- without View (MVC-V)
+2) Dependency injection
+3) Routing service
+4) Error handling
+
+Default action methods in ASP.NEt WEB API Controller:-
+
+GET
+POST
+PUT 
+DELETE
+
+
+===============consuming API in clients==================
+-using C# code with HttpClient object inside System.Net.Http
+-javascript fetch() promise based method
+-jquery ajax methods
+-front-ends like Angular/react etc 
+
+-CORS-   cross-origin-resource-sharing needs to be configured inside api so that it can be consumed by the clients in different domains than api domain.
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

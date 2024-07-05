@@ -11,8 +11,7 @@ namespace MVCEFCoreDBFirst
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
-
+            
 
             //read the connection string from appSettings.json file
             var constr = builder.Configuration.GetConnectionString("sqlconstr");
@@ -20,10 +19,9 @@ namespace MVCEFCoreDBFirst
             builder.Services.AddDbContext<EmployeeDataContext>(options =>
                         options.UseSqlServer(constr)
                 );
-
+            
             //configure dependency injection for Repository class
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -40,7 +38,7 @@ namespace MVCEFCoreDBFirst
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
+            
             app.Run();
         }
     }
