@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCEFCoreDBFirst", "MVCEFCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCEFCoreCodeFirst", "MVCEFCoreCodeFirst\MVCEFCoreCodeFirst.csproj", "{92CD85BA-C2BE-4F5D-85C4-60045EE20BA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeWebApi", "EmployeeWebApi\EmployeeWebApi.csproj", "{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeWebApi", "EmployeeWebApi\EmployeeWebApi.csproj", "{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

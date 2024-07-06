@@ -3,32 +3,23 @@
   "WorkspaceRootPath": "C:\\vsmgit\\ASPDotnetPrjs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C07D52FC-89BA-4775-98AC-35935B9C0658}|MVCEFCoreDBFirst\\MVCEFCoreDBFirst.csproj|c:\\vsmgit\\aspdotnetprjs\\mvcefcoredbfirst\\models\\apiconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07D52FC-89BA-4775-98AC-35935B9C0658}|MVCEFCoreDBFirst\\MVCEFCoreDBFirst.csproj|solutionrelative:mvcefcoredbfirst\\models\\apiconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}|UnitTestProject1\\UnitTestProject1.csproj|c:\\vsmgit\\aspdotnetprjs\\unittestproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8C5CC6E-E06D-4D97-9D05-05364700C7CC}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|c:\\vsmgit\\aspdotnetprjs\\employeewebapi\\models\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|solutionrelative:employeewebapi\\models\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|c:\\vsmgit\\aspdotnetprjs\\employeewebapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|solutionrelative:employeewebapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/RAMASUS/VSMDB/True/SqlTable/dbo.tbl_employee.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|c:\\vsmgit\\aspdotnetprjs\\employeewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|solutionrelative:employeewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07D52FC-89BA-4775-98AC-35935B9C0658}|MVCEFCoreDBFirst\\MVCEFCoreDBFirst.csproj|c:\\vsmgit\\aspdotnetprjs\\mvcefcoredbfirst\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07D52FC-89BA-4775-98AC-35935B9C0658}|MVCEFCoreDBFirst\\MVCEFCoreDBFirst.csproj|solutionrelative:mvcefcoredbfirst\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E497BC0-8011-4AEA-8D41-03001D524BD5}|MVCHelloWorld\\MVCHelloWorld.csproj|c:\\vsmgit\\aspdotnetprjs\\mvchelloworld\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9E497BC0-8011-4AEA-8D41-03001D524BD5}|MVCHelloWorld\\MVCHelloWorld.csproj|solutionrelative:mvchelloworld\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|c:\\vsmgit\\aspdotnetprjs\\employeewebapi\\models\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|solutionrelative:employeewebapi\\models\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|c:\\vsmgit\\aspdotnetprjs\\employeewebapi\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7886A6C-8D1A-4A32-8F0C-9385D7256B87}|EmployeeWebApi\\EmployeeWebApi.csproj|solutionrelative:employeewebapi\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,92 +38,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "EmployeeWebApi\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "EmployeeWebApi\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAYwI8AAAAAAAAA",
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "EmployeeWebApi\\Models\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "EmployeeWebApi\\Models\\GlobalExceptionHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA1wBAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T11:55:34.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiConsumer.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreDBFirst\\Models\\ApiConsumer.cs",
-              "RelativeDocumentMoniker": "MVCEFCoreDBFirst\\Models\\ApiConsumer.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreDBFirst\\Models\\ApiConsumer.cs",
-              "RelativeToolTip": "MVCEFCoreDBFirst\\Models\\ApiConsumer.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAYwFoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T11:05:20.902Z",
+              "WhenOpened": "2024-07-06T10:43:03.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreDBFirst\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "MVCEFCoreDBFirst\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\MVCEFCoreDBFirst\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "MVCEFCoreDBFirst\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAIwEcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T10:27:05.967Z",
+              "Title": "dbo.tbl_employee [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/RAMASUS/VSMDB/True/SqlTable/dbo.tbl_employee.sql",
+              "ToolTip": "dbo.tbl_employee [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-06T10:21:02.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Program.cs",
-              "RelativeDocumentMoniker": "EmployeeWebApi\\Program.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Program.cs",
-              "RelativeToolTip": "EmployeeWebApi\\Program.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAywBIAAAARAAAA",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\UnitTestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\UnitTestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest1.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAYwEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T10:12:10.528Z",
+              "WhenOpened": "2024-07-06T09:56:06.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Home.html",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\wwwroot\\Home.html",
-              "RelativeDocumentMoniker": "MVCHelloWorld\\wwwroot\\Home.html",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\MVCHelloWorld\\wwwroot\\Home.html",
-              "RelativeToolTip": "MVCHelloWorld\\wwwroot\\Home.html",
-              "ViewState": "AQIAABsAAAAAAAAAAAAzwD8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-07-05T07:50:40.833Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeWebApi\\Program.cs",
+              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Program.cs",
+              "RelativeToolTip": "EmployeeWebApi\\Program.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:18:29.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeDbContext.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\EmployeeDbContext.cs",
-              "RelativeDocumentMoniker": "EmployeeWebApi\\Models\\EmployeeDbContext.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\EmployeeDbContext.cs",
-              "RelativeToolTip": "EmployeeWebApi\\Models\\EmployeeDbContext.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAAA0AAAA5AAAA",
+              "DocumentIndex": 2,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "EmployeeWebApi\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EmployeeWebApi\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwEYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T06:37:39.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "EmployeeWebApi\\Models\\Employee.cs",
-              "ToolTip": "C:\\vsmgit\\ASPDotnetPrjs\\EmployeeWebApi\\Models\\Employee.cs",
-              "RelativeToolTip": "EmployeeWebApi\\Models\\Employee.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T06:28:54.776Z",
+              "WhenOpened": "2024-07-06T09:14:39.684Z",
               "EditorCaption": ""
             }
           ]

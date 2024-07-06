@@ -438,6 +438,46 @@ DELETE
 -CORS-   cross-origin-resource-sharing needs to be configured inside api so that it can be consumed by the clients in different domains than api domain.
 
 	
+====================JWT Token based authentication in WEB API Core===========
+
+1) Token-based authentication : we do not store user info inside the browser, rather server will directly check if the token sent by the user is valid or not.
+
+Note: Token is provided by the server itself based on user's credentials.
+
+What is in JWT Token:-
+It has 3 sections: header.payload.footer
+a) header:- type of encryption etc
+b) payload:- user specific data
+c) footer:- header+payload+secret key
+
+
+we need install these packages in api project:-
+1) Microsoft.AspnetCore.Authentication.JwtBearer
+2) Systtem.IdentityModel.Tokens.Jwt
+
+
+====================Global Exception Handling=================
+
+In program.cs file we need to configure middleware for handling the exceptions globally which are missed out from the developer.
+
+
+
+====================Unit testing====================
+A--->Arrange:---arrange all the elements needed to test the method
+A--->Act---> execute the method and collect actual result
+A---->Assert----> Validate the actual result against expected result
+
+
+Mocking in Testing:- It is used to provide or mock the dependency object while performing tests.
+
+Moq:- needs to be installed.
+
+
+
+
+
+
+
 
 
 

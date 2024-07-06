@@ -1,5 +1,10 @@
 ﻿using EmployeeWebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Cryptography;
+using System.Text;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -7,12 +12,18 @@ namespace EmployeeWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class EmployeeController : ControllerBase
     {
         readonly EmployeeDbContext _dbCtx;
-        public EmployeeController(EmployeeDbContext dbCtx)
+        readonly IConfiguration config;
+
+        readonly ILogger logger;
+        public EmployeeController(EmployeeDbContext dbCtx,IConfiguration config/*, ILogger logger*/)
         {
             this._dbCtx = dbCtx;
+            this.config = config;
+            //this.logger = logger;
         }
 
         // GET: api/<EmployeeController>
@@ -20,6 +31,10 @@ namespace EmployeeWebApi.Controllers
         [Route("GetAllEmps")]
         public IActionResult Get()
         {
+            int a = 100;
+            int b = 0;
+            int result = a / b;
+
             try
             {
                 var records = _dbCtx.tbl_employee.ToList();
@@ -35,6 +50,8 @@ namespace EmployeeWebApi.Controllers
             }
             catch (Exception ex)
             {
+                logger.LogError(ex.Message);
+
                 return BadRequest(ex.Message);
             }
         }
@@ -51,7 +68,7 @@ namespace EmployeeWebApi.Controllers
         // GET api/<EmployeeController>/5
         [HttpGet]
         [Route("GetEmpById/{id}")]
-        public IActionResult Get(int id)
+        public IActionResult GetEmpById(int id)
         {
             try
             {
@@ -142,11 +159,39 @@ namespace EmployeeWebApi.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("AddNumbers/{a}/{b}")]
-        //public int AddNumbers(int a,int b)
-        //{
-        //    return a + b;
-        //}
+
+        [HttpPost]
+        [Route("authenticate")]
+        [AllowAnonymous]
+        public string Authenticate(Users user)
+        {
+            //validate user from Database i.e. DAL
+            if(user.username=="ramnath" && user.password=="abc")
+            {
+                //generate token
+                var key = Encoding.UTF8.GetBytes(config["JWT:Key"]);
+                var issuer = config["JWT:Issuer"];
+                var audience= config["JWT:Audience"];
+                var expires = DateTime.UtcNow.AddMinutes(10);
+
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Issuer=issuer,
+                    Audience=audience,
+                    Expires=expires,
+                    SigningCredentials=new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256Signature)                
+                };
+
+                //create the token and write the token into the response
+                var tokenHandler=new JwtSecurityTokenHandler();
+                var token=tokenHandler.CreateToken(tokenDescriptor);
+
+                return tokenHandler.WriteToken(token);
+            }
+            else
+            {
+                return "invalid userid/password!!!";
+            }
+        }
     }
 }
